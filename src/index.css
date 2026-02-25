@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* --- Custom Animations --- */
+
+@layer utilities {
+  /* ၁။ Floating Animation (အပေါ်အောက် ဝဲနေဖို့) */
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* ၂။ Morphing Animation (ပုံသဏ္ဍာန် ပြောင်းလဲနေဖို့) */
+  .animate-morph {
+    animation: morph 8s ease-in-out infinite;
+  }
+
+  /* ၁။ အပေါ်ကို နည်းနည်းလေး ကြွတက်လာတဲ့ animation (Cards တွေအတွက်) */
+  .animate-lift {
+    transition:
+      transform 0.3s ease,
+      shadow 0.3s ease;
+  }
+  .animate-lift:hover {
+    transform: translateY(-10px);
+  }
+
+  /* ၂။ စာသားတွေ ဘေးကနေ ဖြည်းဖြည်းချင်း ဝင်လာဖို့ (Slide-In) */
+  .animate-slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+  }
+
+  /* ၃။ ခလုတ်တွေမှာ သုံးဖို့ Pulse effect (မီးလင်းသလို ဖြစ်နေမှာ) */
+  .animate-soft-pulse {
+    animation: softPulse 2s infinite;
+  }
+}
+
+/* Keyframes Definitions */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  }
+}
+
+/* Smooth Scroll ဖြစ်အောင် တစ်ခါတည်း ထည့်ထားပေးပါတယ် */
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  /* body မှာ overflow-x: hidden ရှိနေရင် scroll logic ကြောင်တတ်လို့ပါ */
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Keyframes Definitions */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 99, 235, 0);
+  }
+}
+
+section {
+  scroll-margin-top: 100px;
+}
