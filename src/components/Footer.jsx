@@ -44,11 +44,11 @@ const Footer = () => {
               },
               {
                 icon: <Linkedin size={24} />,
-                href: "https://linkedin.com/in/your-profile",
+                href: "#",
               },
               {
                 icon: <Facebook size={24} />,
-                href: "https://facebook.com/your-page",
+                href: "#",
               },
               {
                 icon: <Mail size={24} />,

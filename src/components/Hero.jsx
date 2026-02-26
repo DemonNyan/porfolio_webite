@@ -11,9 +11,9 @@ import TailwindIcon from "../icons/tailwindcss.svg";
 const Hero = () => {
   const floatingTech = [
     { img: ReactIcon, pos: "top-0 -left-12", label: "React" },
-    { img: NodeIcon, pos: "top-20 -right-16", label: "Node" },
-    { img: MongoIcon, pos: "bottom-10 -left-16", label: "MongoDB" },
-    { img: ExpressIcon, pos: "bottom-20 -right-12", label: "Express" },
+    { img: NodeIcon, pos: "top-5 -right-16", label: "Node" },
+    { img: MongoIcon, pos: "bottom-10 -left-5", label: "MongoDB" },
+    { img: ExpressIcon, pos: "bottom-10 -right-12", label: "Express" },
     { img: TailwindIcon, pos: "-top-10 right-1/4", label: "Tailwind" },
   ];
 

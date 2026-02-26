@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
-      // Hover လုပ်ရင် အပေါ်ကို ကြွတက်လာပြီး အရိပ် (shadow) ပိုကြီးလာမယ်
       whileHover={{ y: -12 }}
       transition={{ type: "spring", stiffness: 300 }}
       className="group relative bg-white border border-slate-200 rounded-[2rem] overflow-hidden hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] transition-all duration-300 flex flex-col h-full"
@@ -17,11 +16,11 @@ const ProjectCard = ({ project }) => {
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
         />
 
-        {/* Gradient Overlay on Hover */}
+        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-        {/* Floating Icons for GitHub/Demo over Image (Optional Layout) */}
-        <div className="absolute top-4 right-4 flex flex-col gap-2 translate-x-12 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+        {/* 💻 Desktop မှာပဲပေါ်မယ့် Floating Icons (ဖုန်းမှာ hidden ဖြစ်နေမယ်) */}
+        <div className="absolute top-4 right-4 hidden md:flex flex-col gap-2 translate-x-12 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
           <a
             href={project.github}
             target="_blank"
@@ -53,8 +52,8 @@ const ProjectCard = ({ project }) => {
           {project.description}
         </p>
 
-        {/* Tech Stack Tags - အောက်ဆုံးမှာ တန်းစီနေအောင် mt-auto သုံးထားပါတယ် */}
-        <div className="flex flex-wrap gap-2 mt-auto pt-4">
+        {/* Tech Stack Tags */}
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -63,6 +62,26 @@ const ProjectCard = ({ project }) => {
               {tag}
             </span>
           ))}
+        </div>
+
+        {/* 📱 Phone မှာ အောက်ဆုံးက ခလုတ်တွေ (User အတွက် နှိပ်ရတာ ပိုလွယ်မယ်) */}
+        <div className="flex gap-3 mt-auto pt-4 border-t border-slate-100">
+          <a
+            href={project.github}
+            target="_blank"
+            className="flex-1 flex items-center justify-center gap-2 py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition-colors"
+          >
+            <Github size={16} /> Github
+          </a>
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              className="flex-1 flex items-center justify-center gap-2 py-3 bg-blue-600 text-white rounded-xl font-bold text-sm hover:bg-blue-700 transition-colors"
+            >
+              <ExternalLink size={16} /> Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
