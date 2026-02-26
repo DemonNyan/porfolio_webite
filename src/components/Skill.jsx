@@ -3,7 +3,7 @@ import ReactIcon from "../icons/React_dark.svg";
 import NodeIcon from "../icons/nodejs.svg";
 import MongoIcon from "../icons/MongoDB_dark.svg";
 import ExpressIcon from "../icons/Express.js_light.svg";
-import TailwindIcon from "../icons/tailwindCSS.svg";
+import TailwindIcon from "../icons/tailwindcss.svg";
 import MERNIcon from "../icons/mern.jpg";
 
 const Skills = () => {

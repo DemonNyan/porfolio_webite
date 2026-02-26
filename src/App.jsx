@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
-import Skills from "./components/Skill";
+import Skill from "./components/Skill";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <NavBar />
       <Hero />
-      <Skills />
+      <Skill/>
 
       <About />
       <Projects />
