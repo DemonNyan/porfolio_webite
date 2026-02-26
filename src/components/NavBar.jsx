@@ -23,7 +23,7 @@ export default function PortfolioNavbar() {
       className="fixed top-0 w-full z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md px-4 py-3"
     >
       <NavbarBrand href="#home" onClick={() => setActiveTab("Home")}>
-        <span className="self-center whitespace-nowrap text-2xl font-black tracking-tight text-white">
+        <span className="self-center whitespace-nowrap text-2xl font-black tracking-tight ">
           NYAN<span className="text-blue-600">.</span>
         </span>
       </NavbarBrand>
