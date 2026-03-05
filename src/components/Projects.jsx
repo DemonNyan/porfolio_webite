@@ -15,7 +15,7 @@ const Projects = () => {
         "A sleek and functional calculator built using React and Tailwind CSS. Focuses on intuitive user interface and precise logic.",
       tags: ["React", "TailwindCss", "JavaScript"],
       github: "https://github.com/DemonNyan/Calulator_App",
-      demo: "https://calculatorapptesting.netlify.app/",
+      
       image: Project1_Img,
     },
     {
@@ -24,7 +24,7 @@ const Projects = () => {
         "A real-time weather tracking application built with React, Tailwind CSS, and OpenWeatherMap API.",
       tags: ["React", "TailwindCss", "API"],
       github: "https://github.com/DemonNyan/Weather_App",
-      demo: "https://weather-app-ten-lilac-32.vercel.app/",
+      
       image: Project2_Img,
     },
     {
@@ -41,7 +41,7 @@ const Projects = () => {
         "A movie browsing app built with React and Tailwind Css using TMDB API integration.",
       tags: ["React", "TailwindCss", "TMDB"],
       github: "https://github.com/DemonNyan/movie_project_react",
-      demo: "https://movie-project-react-azure.vercel.app/",
+     
       image: Project4_Img,
     },
     {
