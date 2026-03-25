@@ -5,7 +5,10 @@ import Project3_Img from "../img/todo-project.png";
 import Project4_Img from "../img/movieReact.png";
 import Project5_Img from "../img/movieNext.png";
 import Project6_Img from "../img/NewsApp.png";
+import Project7_Img from "../img/NoteApp.png";
+import Project8_Img from "../img/AuthProject.png";
 import ProjectCard from "./ProjectCard";
+import { desc, title } from "framer-motion/client";
 
 const Projects = () => {
   const myProjects = [
@@ -58,8 +61,25 @@ const Projects = () => {
         "A full-featured MERN Stack news application with user authentication and MongoDB data management.",
       tags: ["MERN Stack", "TailwindCss", "Auth"],
       github: "https://github.com/DemonNyan/News-Media",
-
       image: Project6_Img,
+    },
+    {
+      title: "Notes App",
+      description:
+        "Note App with React and Tailwind CSS and MongoDB and Auth and Express and Mern stack project",
+      tags: ["MERN Stack", "TailwindCss", "Auth"],
+      github: "https://github.com/DemonNyan/mern-thinkboard",
+      demo: "https://mern-thinkboard-wjwj.onrender.com/",
+      image: Project7_Img,
+    },
+    {
+      title: "Authentication App",
+      description:
+        "Authentication App using Mern Stack .it  includes login ,register page, user profile page, logout, forget password and reset password, verification email.",
+      tags: ["MERN Stack", "TailwindCss", "Auth"],
+      github: "https://github.com/DemonNyan/auth_project",
+      demo: "https://auth-project-eogg.onrender.com/",
+      image: Project8_Img,
     },
   ];
 
