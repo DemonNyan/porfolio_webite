@@ -29,7 +29,16 @@ const ProjectCard = ({ project }) => {
           >
             <Github size={18} />
           </a>
-      
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/90 backdrop-blur-md rounded-xl text-slate-900 hover:bg-blue-600 hover:text-white transition-all shadow-lg"
+            >
+              <ExternalLink size={18} />
+            </a>
+          )}
         </div>
       </div>
 
@@ -64,7 +73,15 @@ const ProjectCard = ({ project }) => {
           >
             <Github size={16} /> Github
           </a>
-         
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              className="flex-1 flex items-center justify-center gap-2 py-3 bg-slate-900 text-white rounded-xl font-bold text-sm hover:bg-slate-800 transition-colors"
+            >
+              <ExternalLink size={16} /> Live Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.div>
